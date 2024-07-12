@@ -134,3 +134,4 @@ C:\Users\neoco\OneDrive\Documents\CodeStack\FullStack\API\obj\Debug\net8.0\refin
 C:\Users\neoco\OneDrive\Documents\CodeStack\FullStack\API\obj\Debug\net8.0\API.pdb
 C:\Users\neoco\OneDrive\Documents\CodeStack\FullStack\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\neoco\OneDrive\Documents\CodeStack\FullStack\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\neoco\OneDrive\Documents\CodeStack\FullStack\api\obj\Debug\net8.0\API.sourcelink.json
