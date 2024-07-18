@@ -1,9 +1,10 @@
-import { Box, Button, Flex, Heading, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import { Avatar, Badge, Box, Button, Flex, Heading, HStack, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react"
 import ColorModeSwitch from "./ColorModeSwitch"
-import { AddIcon } from "@chakra-ui/icons"
+import { AddIcon, DeleteIcon, EditIcon, ViewIcon } from "@chakra-ui/icons"
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../constant";
 import axios from "axios";
+import ProductSkeleton from "./ProductSkeleton";
 
 interface Product {
   id: number
@@ -35,12 +36,14 @@ const fetchData = () => {
 useEffect(() => {
   fetchData()
 }, [])
+
+if(isLoading) return <ProductSkeleton/>
   return (
     <>
       <ColorModeSwitch />
       <Box shadow={"md"} m="32">
         <Flex justifyContent={"space-between"} alignItems={'center'} px={'5'} mb={'10'}>
-          <Heading>
+          <Heading fontSize={20}>
             Product List
           </Heading>
           <Button leftIcon={<AddIcon />} color={'teal.300'}>
@@ -54,6 +57,7 @@ useEffect(() => {
               <Tr>
                 <Th>Id</Th>
                 <Th>Name</Th>
+                <Th>Description</Th>
                 <Th>Is In Stock</Th>
                 <Th isNumeric>Price</Th>
                 <Th>Actions</Th>
@@ -63,15 +67,26 @@ useEffect(() => {
               {data.map((product:Product) => (
                 <Tr key={product.id}>
                   <Td>{product.id}</Td>
-                  <Td>{product.name}</Td>
+                  <Td>
+                    <HStack>
+                      <Avatar size={'sm'} name={product.name}/>
+                      <Text>{product.name}</Text>
+                    </HStack>
+                  </Td>
                   <Td>{product.description}</Td>
-                  <Td>{product.isInStore}</Td>
+                  <Td>
+                    <Badge>{product.isInStore ? "Yes" : "No"}</Badge>
+                  </Td>
                   <Td isNumeric>{product.price}</Td>
-                  <Td>25.4</Td>
+                  <Td>
+                    <HStack>
+                      <EditIcon boxSize={22} color={'orange.200'}/>
+                      <DeleteIcon  boxSize={22} color={'red.400'}/>
+                      <ViewIcon  boxSize={22} color={'green.300'}/>
+                    </HStack>
+                  </Td>
                 </Tr>
-              ))
-
-              }
+              ))}
             </Tbody>
 
           </Table>
