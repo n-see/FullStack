@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\API\\API.csproj": {}
+    "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\API\\API.csproj": {
+    "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\API\\API.csproj",
+        "projectPath": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\api\\API.csproj",
         "packagesPath": "C:\\Users\\neoco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\API\\obj\\",
+        "outputPath": "C:\\Users\\neoco\\OneDrive\\Documents\\CodeStack\\FullStack\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\neoco\\AppData\\Roaming\\NuGet\\NuGet.Config"
